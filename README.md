@@ -2,9 +2,9 @@
 
 <img src="public/greentrack-logo.png" alt="Greentrack" width="96">
 
-Windows desktop tracker built with [Tauri](https://tauri.app/). A track can be a habit, a goal, a task, or exam prep. Each one has dated notes, a color-coded calendar, and streaks / a heatmap.
+A local Windows tracker, built with [Tauri](https://tauri.app/). A track can be a habit, a goal, a task, or exam prep.
 
-Free and open source. Local only: nothing is uploaded.
+Free and open source. Saves locally.
 
 ## Preview
 
@@ -12,14 +12,12 @@ Free and open source. Local only: nothing is uploaded.
 
 ## Features
 
-- Tracks in the left sidebar, notes in the center, calendar on the right
-- Quick add (`Ctrl` / `Cmd` + `K`), tags, and a stats pane
-- Session timer: 25 min, 45 min, 1 hour, 2 hours, or 3 hours
-- Settings: light / dark, backdrops, and accents
-- Closing the window hides the app to the system tray (quit from the tray menu)
-- Delete a track from the notes header (confirm first)
-
-Calendar days can be marked done, partial, or missed. Settings also cover heatmap visibility, week start, note size, and reduced motion.
+- Add a track and keep a daily note for it (`Ctrl` / `Cmd` + `K` to quick-add)
+- Mark the day done, partial, or missed
+- See the month, streak, and heatmap
+- Sit with a timer — 25 minutes up to 3 hours
+- Light and dark themes; data stays on your computer
+- Close goes to the tray so you don't lose the session
 
 ## Requirements
 
