@@ -414,8 +414,10 @@ function renderNotes() {
       </div>
     </header>
     <div class="editor-card">
-      <div class="gutter" id="gutter">${lineGutter(note)}</div>
-      <textarea class="editor" id="note-editor" placeholder="What did you do, where did you stall, what is next.">${escapeHtml(note)}</textarea>
+      <div class="editor-body">
+        <div class="gutter" id="gutter">${lineGutter(note)}</div>
+        <textarea class="editor" id="note-editor" placeholder="What did you do, where did you stall, what is next.">${escapeHtml(note)}</textarea>
+      </div>
     </div>
     <div class="session-bar">
       <div>
@@ -558,10 +560,11 @@ function playMotion() {
 
 function restoreFocus(wasEditor: boolean, wasSearch: boolean, caret: number | null, searchCaret: number | null, noteScroll: number) {
   const editor = document.querySelector<HTMLTextAreaElement>("#note-editor");
+  const editorCard = document.querySelector(".editor-card");
   if (editor && wasEditor) {
     editor.focus();
     if (caret !== null) editor.setSelectionRange(caret, caret);
-    editor.scrollTop = noteScroll;
+    if (editorCard) editorCard.scrollTop = noteScroll;
   }
 
   const search = document.querySelector<HTMLInputElement>("#search");
@@ -582,7 +585,7 @@ function render() {
   const wasSearch = document.activeElement?.id === "search";
   const caret = editor?.selectionStart ?? null;
   const searchCaret = wasSearch ? search?.selectionStart ?? null : null;
-  const noteScroll = editor?.scrollTop ?? 0;
+  const noteScroll = document.querySelector(".editor-card")?.scrollTop ?? 0;
   const settingsScroll = settingsPage?.scrollTop ?? 0;
 
   app.innerHTML = `
