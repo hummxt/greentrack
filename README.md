@@ -4,7 +4,7 @@
 
 Windows desktop tracker built with [Tauri](https://tauri.app/). A track can be a habit, a goal, a task, or exam prep. Each one has dated notes, a color-coded calendar, and streaks / a heatmap.
 
-Local only: nothing is uploaded. Built by [Hummet Azim](https://www.hummet.dev).
+Free and open source. Local only: nothing is uploaded.
 
 ## Preview
 
@@ -50,4 +50,10 @@ That writes:
 
 Tracks and notes are stored on this computer: browser storage plus `habits.json` in the app data folder. Settings stay in local storage. There is no cloud account.
 
-Personal project. No license file.
+## License
+
+Greentrack is free and open source under the [MIT License](LICENSE).
+
+
+Built by [Hummet Azim](https://www.hummet.dev).
+
