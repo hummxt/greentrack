@@ -1,0 +1,7 @@
+[[permission]]
+identifier = "allow-load-store"
+commands.allow = ["load_store"]
+
+[[permission]]
+identifier = "allow-save-store"
+commands.allow = ["save_store"]
