@@ -1,0 +1,51 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies and frontend build
+node_modules/
+dist/
+dist-ssr/
+
+# Rust / Tauri build (EXE, MSI, NSIS live here — attach as GitHub Release assets)
+src-tauri/target/
+src-tauri/WixTools/
+
+# Secrets and local overrides
+.env
+.env.*
+!.env.example
+*.local
+
+# Private notes — do not upload
+GREENTRACK.md
+
+# Duplicate of public/greentrack-logo.png (splash uses public/)
+src/assets/greentrack-logo.png
+
+# Installer / binary copies dropped at repo root
+*.exe
+*.msi
+*.nsis
+*.pdb
+
+# OS junk
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
