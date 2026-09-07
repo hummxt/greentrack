@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greentrack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anybody:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="splash" class="splash">
+      <canvas id="splash-fx" class="splash-fx"></canvas>
+      <div class="splash-vignette"></div>
+      <div class="splash-sweep"></div>
+      <div class="splash-grain"></div>
+      <div class="splash-world">
+        <div id="splash-grid" class="splash-grid"></div>
+      </div>
+      <div class="splash-brand">
+        <div class="splash-mark" aria-hidden="true">
+          <img src="/greentrack-logo.png" alt="" />
+        </div>
+        <h1 class="splash-word">
+          <span class="splash-char">G</span><span class="splash-char">r</span><span class="splash-char">e</span><span class="splash-char">e</span><span class="splash-char">n</span><span class="splash-char is-accent">t</span><span class="splash-char is-accent">r</span><span class="splash-char is-accent">a</span><span class="splash-char is-accent">c</span><span class="splash-char is-accent">k</span>
+        </h1>
+      </div>
+      <div id="splash-weeks" class="splash-weeks"></div>
+      <div class="win-controls splash-win">
+        <button type="button" class="js-win-min" aria-label="Minimize">─</button>
+        <button type="button" class="js-win-max" aria-label="Maximize">□</button>
+        <button type="button" class="js-win-close" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
