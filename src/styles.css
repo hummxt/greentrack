@@ -715,6 +715,10 @@ button {
 }
 
 .notes {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
   background: var(--white);
   border-left: 1px solid var(--line-soft);
   border-right: 1px solid var(--line-soft);
@@ -722,6 +726,7 @@ button {
 
 .note-title-row {
   display: flex;
+  flex-shrink: 0;
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
@@ -806,24 +811,31 @@ button {
 
 .editor-card {
   margin: 18px 28px 0;
+  padding: 16px 0;
   border: 1px solid var(--line);
   background: var(--bg);
   min-height: 0;
   flex: 1;
-  display: grid;
-  grid-template-columns: 42px 1fr;
+  overflow: auto;
   box-shadow: var(--shadow);
+}
+
+.editor-body {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: stretch;
 }
 
 .gutter {
   border-right: 1px solid var(--line-soft);
-  padding: 16px 0;
+  padding: 0;
   font-family: var(--mono);
   font-size: 12px;
   line-height: 28px;
   color: var(--faint);
   text-align: right;
   user-select: none;
+  overflow: hidden;
 }
 
 .gutter div {
@@ -835,11 +847,14 @@ button {
   resize: none;
   outline: none;
   background: transparent;
-  padding: 16px 18px;
+  padding: 0 18px;
   font-size: var(--editor-size);
   line-height: 28px;
   color: var(--ink);
-  min-height: 220px;
+  min-height: 100%;
+  height: auto;
+  field-sizing: content;
+  overflow: hidden;
 }
 
 .editor::placeholder {
@@ -848,6 +863,7 @@ button {
 
 .session-bar {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 18px;
   margin: 14px 28px 18px;
@@ -1088,6 +1104,8 @@ button {
 }
 
 .stats-panel {
+  flex: 1;
+  min-height: 0;
   padding: 22px 28px;
   overflow: auto;
 }
